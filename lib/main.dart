@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:task/layout/app_layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,12 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: Scaffold(),
-    );
+    return ResponsiveSizer(builder: (BuildContext context, Orientation orientation, ScreenType screenType) {
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.light(),
+        home: const AppLayout(),
+      );
+    });
   }
 }
