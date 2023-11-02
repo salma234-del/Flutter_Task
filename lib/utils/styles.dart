@@ -1,47 +1,54 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:task/utils/colors.dart';
+import 'package:task/utils/constants.dart';
+
+// texts styles
 
 abstract class Styles {
-  static TextStyle textStyle20 = TextStyle(
-    fontSize: 20.sp,
+
+  // text with 16 font size
+  static TextStyle textStyle20 = const TextStyle(
+    fontSize: 20,
     fontWeight: FontWeight.w500,
-    color: AppColors.blackText,
+    color: AppColors.black,
+    fontFamily: Constants.kAppFontFammily
   );
 
-  static TextStyle textStyle16_500 = TextStyle(
-    fontSize: 16.sp,
+  // text with 16 font size and 500 weight
+  static TextStyle textStyle16_500 = const TextStyle(
+    fontSize: 16,
     fontWeight: FontWeight.w500,
-    color: AppColors.blackText,
+    color: AppColors.black,
   );
-
-  static TextStyle textStyle16_400 = TextStyle(
-    fontSize: 16.sp,
+ 
+  // text with 16 font size and 400 weight
+  static TextStyle textStyle16_400 = const TextStyle(
+    fontSize: 16,
     fontWeight: FontWeight.w400,
-    color: AppColors.lightBlackText,
+    color: AppColors.lightBlack,
   );
 
-  static TextStyle textStyle18 = TextStyle(
-    fontSize: 18.sp,
+  static TextStyle textStyle18 = const TextStyle(
+    fontSize: 18,
     fontWeight: FontWeight.w500,
-    color: AppColors.blackText,
+    color: AppColors.black,
   );
 
-  static TextStyle textStyle14_300 = TextStyle(
-    fontSize: 14.sp,
+  static TextStyle textStyle14_300 = const TextStyle(
+    fontSize: 14,
     fontWeight: FontWeight.w300,
-    color: AppColors.greyText,
+    color: AppColors.grey,
   );
 
-  static TextStyle textStyle14_500 = TextStyle(
-    fontSize: 14.sp,
+  static TextStyle textStyle14_500 = const TextStyle(
+    fontSize: 14,
     fontWeight: FontWeight.w500,
-    color: AppColors.whiteText,
+    color: AppColors.white,
   );
 
-  static TextStyle textStyle14_400 = TextStyle(
-    fontSize: 14.sp,
+  static TextStyle textStyle14_400 = const TextStyle(
+    fontSize: 14,
     fontWeight: FontWeight.w400,
-    color: AppColors.blackText,
+    color: AppColors.black,
   );
 }
