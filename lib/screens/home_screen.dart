@@ -1,6 +1,6 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:task/utils/lists.dart';
+import 'package:task/utils/assets.dart';
+import 'package:task/utils/functions.dart';
 import 'package:task/widgets/custom_slider.dart';
 import 'package:task/widgets/home_intro.dart';
 import 'package:task/widgets/slider_indicator.dart';
@@ -20,31 +20,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    automaticSliderMove();
+    automaticSliderMove(currIdx, sliderController);
   }
 
   @override
   void dispose() {
     sliderController.dispose();
     super.dispose();
-  }
-
-  // move slider pages automatic in certain time
-  void automaticSliderMove() {
-    Timer.periodic(const Duration(seconds: 4), (Timer timer) {
-      // if current page index smaller then pages size we will increase page index and animate to next page
-      if (currIdx < Lists.slider.length) {
-        sliderController.animateToPage(
-          currIdx,
-          duration: const Duration(milliseconds: 350),
-          curve: Curves.easeIn,
-        );
-        currIdx++;
-      } else {
-        // else if reach to last page we begin from first page again
-        currIdx = 0;
-      }
-    });
   }
 
   @override
@@ -60,12 +42,17 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // display the user's profile picture and name
-              HomeInto(name: name),
+              // display the user's profile picture and name, home title and body
+              HomeInto(
+                name: name,
+                image: Assets.profilePicLogo,
+              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  CustomSlider(sliderController: sliderController,),
+                  CustomSlider(
+                    sliderController: sliderController,
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(
                       vertical: 10,

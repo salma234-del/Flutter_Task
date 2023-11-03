@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:task/utils/lists.dart';
 
 // function to convert any color to material color
 MaterialColor buildMaterialColor(Color color) {
@@ -19,4 +22,22 @@ MaterialColor buildMaterialColor(Color color) {
     );
   }
   return MaterialColor(color.value, swatch);
+}
+
+// move slider pages automatic in certain time
+void automaticSliderMove(int currIdx, PageController sliderController) {
+  Timer.periodic(const Duration(seconds: 4), (Timer timer) {
+    // if current page index smaller then pages size we will increase page index and animate to next page
+    if (currIdx < Lists.slider.length) {
+      sliderController.animateToPage(
+        currIdx,
+        duration: const Duration(milliseconds: 350),
+        curve: Curves.easeIn,
+      );
+      currIdx++;
+    } else {
+      // else if reach to last page we begin from first page again
+      currIdx = 0;
+    }
+  });
 }
