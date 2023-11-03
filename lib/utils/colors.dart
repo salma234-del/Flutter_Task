@@ -9,4 +9,6 @@ abstract class AppColors {
   static const Color lightBlack = Color(0xff1E1E1E);
   static const Color greyScale1 = Color(0xff1E1E1E);
   static const Color greyScale2 = Color(0xffC4C4C4);
+  static const Color sliderBg = Color(0xffFFF5F5);
+  static const Color indicator = Color(0xffE0E0E0);
 }

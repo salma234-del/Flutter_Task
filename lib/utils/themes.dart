@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:task/utils/colors.dart';
-import 'package:task/utils/constants.dart';
 import 'package:task/utils/functions.dart';
 import 'package:task/utils/styles.dart';
 
@@ -12,27 +11,26 @@ abstract class AppTheme {
       statusBarIconBrightness: Brightness.dark,
     ),
     backgroundColor: AppColors.white,
-    elevation: 5,
+    elevation: 1,
     titleTextStyle: Styles.textStyle20,
     centerTitle: true,
     iconTheme: const IconThemeData(
       color: AppColors.black,
-      size: 24,
     ),
   );
 
-  static const BottomNavigationBarThemeData bottomNavBar =
+  static BottomNavigationBarThemeData bottomNavBar =
       BottomNavigationBarThemeData(
     type: BottomNavigationBarType.fixed,
-    backgroundColor: Colors.white,
-    selectedItemColor: AppColors.primary,
+    backgroundColor: AppColors.white,
     unselectedItemColor: AppColors.greyScale2,
     elevation: 10,
+    selectedLabelStyle: Styles.textStyle15,
+    unselectedLabelStyle: Styles.textStyle15,
   );
 
   // app light theme
   static ThemeData lightTheme = ThemeData(
-    fontFamily: Constants.kAppFontFammily,
     primarySwatch: buildMaterialColor(AppColors.primary),
     scaffoldBackgroundColor: AppColors.background,
     appBarTheme: AppTheme.appBar,

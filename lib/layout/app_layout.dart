@@ -23,9 +23,6 @@ class _AppLayoutState extends State<AppLayout> {
       ),
       body: Lists.screens[currIdx],
       bottomNavigationBar: BottomNavigationBar(
-        selectedFontSize: 15,
-        unselectedFontSize: 15,
-        iconSize: 24,
         items: Lists.navItems,
         onTap: (index) {
           changeBottomNavBarIndex(index);
@@ -36,7 +33,7 @@ class _AppLayoutState extends State<AppLayout> {
   }
 
   void changeBottomNavBarIndex(int index) {
-      setState(() {
+    setState(() {
       currIdx = index;
     });
   }
