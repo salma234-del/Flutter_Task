@@ -76,4 +76,11 @@ abstract class Lists {
       onPressed: () {},
     ),
   ];
+
+  // tab bar items
+  static List<String> tabs = [
+    'Categories',
+    'Services',
+    'Orders',
+  ];
 }
