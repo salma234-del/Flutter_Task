@@ -18,10 +18,10 @@ abstract class AppStrings {
   static const String firstSliderButtomText = 'Order';
   static const String secondSliderButtomText = 'My Assets';
   static const String thirdSliderButtomText = 'Request';
-   static const String categories = 'Caregories';
-    static const String services = 'Services';
-     static const String orderes = 'Orders';
-  static const String viewCategories = 'Categories View';
+  static const String users = 'Users';
+  static const String categories = 'Categories';
+  static const String services = 'Services';
+  static const String orderes = 'Orders';
+  static const String view = 'View';
   static const String seeAll = 'see all';
-  
 }

@@ -80,7 +80,7 @@ abstract class Lists {
 
   // tab bar items
   static List<String> tabs = [
-    AppStrings.categories,
+    AppStrings.users,
     AppStrings.services,
     AppStrings.orderes,
   ];

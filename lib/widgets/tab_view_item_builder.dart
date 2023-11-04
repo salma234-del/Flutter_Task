@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task/models/tab_view_item_model.dart';
+import 'package:task/models/user_model.dart';
 import 'package:task/utils/colors.dart';
 import 'package:task/utils/extensions.dart';
 import 'package:task/utils/styles.dart';
@@ -9,7 +9,7 @@ class TabViewItemBuilder extends StatelessWidget {
     super.key,
     required this.model,
   });
-  final TabViewItemModel model;
+  final UserModel model;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -31,10 +31,12 @@ class TabViewItemBuilder extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Image.asset(model.icon),
+              Text('${model.id}',
+              style: Styles.textStyle16_400,
+              ),
               10.width,
               Text(
-                model.text,
+                model.name,
                 style: Styles.textStyle16_400,
               ),
               const Spacer(),

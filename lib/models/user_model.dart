@@ -1,13 +1,13 @@
 class UserModel {
   final int id;
-  final String userName;
+  final String name;
 
-  UserModel({required this.id, required this.userName});
+  UserModel({required this.id, required this.name});
 
   factory UserModel.fromJsom(json) {
     return UserModel(
       id: json['id'],
-      userName: json['username'],
+      name: json['name'],
     );
   }
 }

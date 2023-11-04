@@ -6,8 +6,9 @@ import 'package:task/utils/styles.dart';
 class FirstTabViewHeader extends StatelessWidget {
   const FirstTabViewHeader({
     super.key,
+    required this.headerLabel,
   });
-  
+  final String headerLabel;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class FirstTabViewHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          AppStrings.viewCategories,
+          '${AppStrings.view} $headerLabel',
           style: Styles.textStyle14_400,
         ),
         InkWell(
