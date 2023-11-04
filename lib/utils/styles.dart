@@ -64,4 +64,10 @@ abstract class Styles {
     fontWeight: FontWeight.w400,
     fontFamily: Constants.kAppFontFamily,
   );
+  static TextStyle textStyle22 = const TextStyle(
+    fontSize: 22,
+    color: AppColors.emptyState,
+    fontWeight: FontWeight.w700,
+    fontFamily: Constants.kAppFontFamily,
+  );
 }

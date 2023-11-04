@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task/models/slider_model.dart';
+import 'package:task/models/tab_view_item_model.dart';
 import 'package:task/screens/assets_screen.dart';
 import 'package:task/screens/home_screen.dart';
 import 'package:task/screens/profile_screen.dart';
@@ -79,8 +80,41 @@ abstract class Lists {
 
   // tab bar items
   static List<String> tabs = [
-    'Categories',
-    'Services',
-    'Orders',
+    AppStrings.categories,
+    AppStrings.services,
+    AppStrings.orderes,
   ];
+
+  // first tab view body items
+  static List<TabViewItemModel> firstTabViewItems = [
+    TabViewItemModel(
+      icon: Assets.categoryIcon1,
+      text: 'Construction',
+      onPressed: () {},
+    ),
+     TabViewItemModel(
+      icon: Assets.categoryIcon2,
+      text: 'Insurances',
+      onPressed: () {},
+    ),
+     TabViewItemModel(
+      icon: Assets.categoryIcon3,
+      text: 'Legal',
+      onPressed: () {},
+    ),
+     TabViewItemModel(
+      icon: Assets.categoryIcon4,
+      text: 'Buy & Sell',
+      onPressed: () {},
+    ),
+     TabViewItemModel(
+      icon: Assets.categoryIcon5,
+      text: 'Accounting Services',
+      onPressed: () {},
+    )
+  ];
+  // second tab view body items
+  static List<TabViewItemModel> secondTabViewItems = [];
+  // second tav view body items
+  static List<TabViewItemModel> thirdTabViewItems = [];
 }

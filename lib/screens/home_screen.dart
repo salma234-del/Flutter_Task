@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task/utils/assets.dart';
-import 'package:task/utils/extensions.dart';
 import 'package:task/utils/functions.dart';
 import 'package:task/utils/lists.dart';
-import 'package:task/widgets/custom_slider.dart';
-import 'package:task/widgets/home_intro.dart';
-import 'package:task/widgets/slider_indicator.dart';
-import 'package:task/widgets/tab_bar_tabs_body.dart';
+import 'package:task/widgets/home_intro_and_slider.dart';
+import 'package:task/widgets/tab_bar_and_tab_view.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -38,61 +34,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20,
-          vertical: 16,
-        ),
-        child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // display the user's profile picture and name, home title and body
-              HomeInto(
-                name: name,
-                image: Assets.profilePicLogo,
-              ),
-              // slider and indicator
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CustomSlider(
-                    sliderController: sliderController,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 15,
-                    ),
-                    child: SliderIndictor(
-                      controller: sliderController,
-                    ),
-                  ),
-                ],
-              ),
-              // tab bar tabs
-              TabBarTabsBody(tabController: tabController),
-              // tab bar views
-              Container(
-                width: context.w,
-                height: 500,
-                child: TabBarView(
-                  controller: tabController,
-                  children: [
-                    Container(
-                      color: Colors.yellow,
-                    ),
-                    Container(
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      color: Colors.black,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Home intro and slider
+            HomeIntroAndSlider(name: name, sliderController: sliderController),
+            // Tab bar tabs and tabs views
+            TabBarAndTabView(tabController: tabController),
+          ],
         ),
       ),
     );

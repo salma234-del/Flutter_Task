@@ -19,7 +19,7 @@ class WelcomeUser extends StatelessWidget {
     return Wrap(
       children: [
         Image.asset(userImage),
-        5.w,
+        5.width,
         Text(
           AppStrings.hey,
           style: Styles.textStyle16_500,

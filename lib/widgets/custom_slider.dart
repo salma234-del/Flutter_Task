@@ -3,6 +3,7 @@ import 'package:task/utils/colors.dart';
 import 'package:task/utils/extensions.dart';
 import 'package:task/utils/lists.dart';
 import 'package:task/widgets/slider_item_builder.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomSlider extends StatelessWidget {
   const CustomSlider({
@@ -15,7 +16,8 @@ class CustomSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: context.h * 0.5,
+      width: context.w,
+      height: 280.r,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: AppColors.sliderBg,
@@ -37,4 +39,3 @@ class CustomSlider extends StatelessWidget {
     );
   }
 }
-

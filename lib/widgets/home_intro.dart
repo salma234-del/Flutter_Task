@@ -4,8 +4,8 @@ import 'package:task/utils/strings.dart';
 import 'package:task/utils/styles.dart';
 import 'package:task/widgets/welcome_user.dart';
 
-class HomeInto extends StatelessWidget {
-  const HomeInto({
+class HomeIntro extends StatelessWidget {
+  const HomeIntro({
     super.key,
     required this.name,
     required this.image,
@@ -24,17 +24,17 @@ class HomeInto extends StatelessWidget {
           userImage: image,
         ),
         // SizedBox with height: 25
-        25.h,
+        25.height,
         Text(
           AppStrings.homeTitle,
           style: Styles.textStyle18,
         ),
-        10.h,
+        10.height,
         Text(
           AppStrings.homeBody,
           style: Styles.textStyle14_300,
         ),
-        15.h,
+        15.height,
       ],
     );
   }
